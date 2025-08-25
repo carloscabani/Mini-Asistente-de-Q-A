@@ -27,7 +27,7 @@ export const Uploader: React.FC<UploaderProps> = ({ onUpload, uploadedFiles, isU
       <h2>Cargar Documentos</h2>
       <div {...getRootProps()} className={`dropzone ${isDragActive ? 'active' : ''}`}>
         <input {...getInputProps()} />
-        {isUploading ? <p>Cargando...</p> : <p>Arrastra archivos o haz clic para seleccionar.</p>}
+        {isUploading ? <p>Cargando...</p> : <p>Haz clic para seleccionar tus archivos</p>}
       </div>
       {uploadedFiles.length > 0 && (
         <div className="files-list">

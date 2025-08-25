@@ -1,27 +1,13 @@
 {
-  "name": "mini-asistente-de-q-a",
-  "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.1",
-    "express": "^5.1.0",
-    "multer": "^2.0.2",
-    "node-fetch": "^3.3.2",
-    "openai": "^5.15.0",
-    "pdfjs-dist": "^2.16.105"
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-dropzone": "^14.3.8"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "@types/react": "^19.1.11",
+    "@types/react-dom": "^19.1.7",
+    "@types/react-dropzone": "^5.1.0",
+    "typescript": "^5.9.2"
   }
 }
