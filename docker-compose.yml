@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   backend:
     build: ./backend  
@@ -9,12 +7,25 @@ services:
       - ./backend/src:/app/src 
     environment:
       - OLLAMA_API_URL=http://host.docker.internal:11434/api/generate
+      - NODE_ENV=production
+      - PORT=8080
+    networks:
+      - app-network
     restart: unless-stopped
 
   frontend:
-    build: ./frontend 
+    build: 
+      context: ./frontend
+      args:
+        - REACT_APP_API_URL=http://localhost:8080
     ports:
       - "3000:80"     
     depends_on:
-      - backend       
+      - backend
+    networks:
+      - app-network       
     restart: unless-stopped
+
+networks:
+  app-network:
+    driver: bridge

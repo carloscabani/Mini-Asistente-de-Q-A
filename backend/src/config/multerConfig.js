@@ -12,7 +12,15 @@ const storage = multer.diskStorage({
         cb(null, uploadDir);
     },
     filename: (req, file, cb) => {
-        cb(null, `${Date.now()}-${file.originalname}`);
+        const sanitizedFilename = path.basename(file.originalname);
+        const filePath = path.join(uploadDir, sanitizedFilename);
+    
+        if (fs.existsSync(filePath)) {
+            console.warn(`Archivo duplicado detectado: ${file.originalname}. No se subirá.`);
+            cb(null, false); 
+        } else {
+            cb(null, sanitizedFilename);
+        }
     },
 });
 
