@@ -65,7 +65,7 @@ El tiempo total invertido en el desarrollo de esta aplicación fue de **17 horas
 
 ## Video de la aplicación
 
-A continuación, se incluye un video del funcionamiento de la aplicación:
+A continuación, haga click en la imagen para ver el video del funcionamiento de la aplicación:
 
 [![Mini Asistente de Preguntas y Respuestas](https://img.youtube.com/vi/9aHvZNZrlzA/0.jpg)](https://youtu.be/9aHvZNZrlzA)
 
